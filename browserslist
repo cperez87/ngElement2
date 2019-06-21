@@ -5,10 +5,12 @@
 # You can see what browsers were selected by your queries by running:
 #   npx browserslist
 
-# Chrome 70
-
-> 0.5%
-last 2 versions
+Chrome 70
 Firefox ESR
-not dead
-not IE 9-11 # For IE 9-11 support, remove 'not'.
+Firefox 67
+
+# > 0.5%
+# last 2 versions
+# Firefox ESR
+# not dead
+# not IE 9-11 # For IE 9-11 support, remove 'not'.
