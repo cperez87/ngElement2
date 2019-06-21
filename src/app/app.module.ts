@@ -4,7 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { createCustomElement } from '@angular/elements';
 import { MatIconModule, MatInputModule, MatButtonModule, MatDialogModule, MatStepperModule,
   MatDatepickerModule, MatNativeDateModule, MatFormFieldModule, MatSelectModule,
-  MatCheckboxModule } from '@angular/material';
+  MatCheckboxModule,
+  MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -43,6 +44,9 @@ import { CdkOverlayContainerDirective } from './cdk-overlay-container.directive'
     MatStepperModule
   ],
   providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {
+      appearance: 'outline'
+    }},
     { provide: OverlayContainer, useClass: CdkOverlayContainer }
   ],
   entryComponents: [PageShellComponent, RemittanceTransferComponent, DataExampleDialog],
