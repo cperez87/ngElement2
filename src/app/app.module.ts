@@ -14,7 +14,6 @@ import { PageShellComponent } from './page-shell/page-shell.component';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { CdkOverlayContainer } from './cdk-overlay-container';
 import { CdkOverlayContainerDirective } from './cdk-overlay-container.directive';
-import { AppOverlayContainer } from './custom-overlay-container';
 
 @NgModule({
   declarations: [
