@@ -14,7 +14,6 @@ export class CdkOverlayContainerDirective {
         this.elementReference    = elementReference;
         this.cdkOverlayContainer = cdkOverlayContainer;
 
-        // tslint:disable-next-line:no-string-literal
-        this.cdkOverlayContainer['myCreateContainer'](this.elementReference.nativeElement);
+        (this.cdkOverlayContainer as CdkOverlayContainer).myCreateContainer(this.elementReference.nativeElement);
     }
 }

@@ -11,6 +11,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class RemittanceTransferComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
 
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder) { }
 
@@ -31,6 +36,11 @@ export class RemittanceTransferComponent implements OnInit {
     });
   }
 
+}
+
+export interface Food {
+  value: string;
+  viewValue: string;
 }
 
 @Component({
