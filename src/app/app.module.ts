@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule, MatInputModule } from '@angular/material';
 
 // import { AppComponent } from './app.component';
 import { RemittanceTransferComponent } from './remittance-transfer/remittance-transfer.component';
@@ -15,7 +15,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   entryComponents: [RemittanceTransferComponent],
