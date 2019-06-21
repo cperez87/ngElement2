@@ -40,7 +40,7 @@ import { AppOverlayContainer } from './custom-overlay-container';
     MatStepperModule
   ],
   providers: [
-    // { provide: OverlayContainer, useClass: CdkOverlayContainer }
+    { provide: OverlayContainer, useClass: CdkOverlayContainer }
     // { provide: OverlayContainer, useFactory: () => new AppOverlayContainer(null) }
   ],
   entryComponents: [PageShellComponent, RemittanceTransferComponent, DataExampleDialog],
