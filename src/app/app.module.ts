@@ -4,6 +4,7 @@ import { createCustomElement } from '@angular/elements';
 
 import { AppComponent } from './app.component';
 import { RemittanceTransferComponent } from './remittance-transfer/remittance-transfer.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { RemittanceTransferComponent } from './remittance-transfer/remittance-tr
     RemittanceTransferComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NoopAnimationsModule
   ],
   providers: [],
   entryComponents: [RemittanceTransferComponent],
