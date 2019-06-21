@@ -5,6 +5,7 @@ import { createCustomElement } from '@angular/elements';
 import { MatIconModule, MatInputModule, MatButtonModule, MatDialogModule, MatStepperModule,
   MatDatepickerModule, MatNativeDateModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // import { AppComponent } from './app.component';
 import { RemittanceTransferComponent, DataExampleDialog } from './remittance-transfer/remittance-transfer.component';
@@ -26,6 +27,7 @@ import { CdkOverlayContainerDirective } from './cdk-overlay-container.directive'
   imports: [
     BrowserModule,
     OverlayModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
     NoopAnimationsModule,
     MatIconModule,

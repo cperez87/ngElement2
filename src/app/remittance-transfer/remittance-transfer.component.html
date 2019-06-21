@@ -3,39 +3,54 @@
   <span>Icon: </span><mat-icon>sentiment_very_satisfied</mat-icon>
   <button mat-raised-button color="primary" (click)="openDialog()">Open dialog</button>
 
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Standard form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>account_circle</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="fill">
-      <mat-label>Fill form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>home</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>lock</mat-icon>
-      <mat-hint>Somthing</mat-hint>
-    </mat-form-field>
-  </p>
+  <div fxLayout="row" fxLayoutAlign="space-around">
+    <div>
+        <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Standard form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>account_circle</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="fill">
+              <mat-label>Fill form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>home</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Outline form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>lock</mat-icon>
+              <mat-hint>Somthing</mat-hint>
+            </mat-form-field>
+          </p>
+        
+          
+    </div>  
+    <div>
+        <p><mat-form-field>
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p>
 
-  <p><mat-form-field>
-      <mat-label>Favorite food</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{food.viewValue}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field></p>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+  </div>
+
 <hr>
 
 <mat-horizontal-stepper [linear]="true" labelPosition="bottom" #stepper>
@@ -73,12 +88,6 @@
 </mat-horizontal-stepper>
 
 <hr/>
-
-<mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
 
 <div myCdkOverlayContainer class="cdk-overlay-container"></div>
 </div>
