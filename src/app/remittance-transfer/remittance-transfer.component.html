@@ -1,6 +1,8 @@
 <div class="mat-typography">
   <h1>Page H1 (Roboto)</h1>
   <span>Icon: </span><mat-icon>sentiment_very_satisfied</mat-icon>
+  <button mat-raised-button color="primary" (click)="openDialog()">Open dialog</button>
+
   <p>
     <mat-form-field appearance="standard">
       <mat-label>Standard form field</mat-label>
@@ -34,9 +36,6 @@
         </mat-option>
       </mat-select>
     </mat-form-field></p>
-
-<button mat-raised-button color="primary" (click)="openDialog()">Open dialog</button>
-
 <hr>
 
 <mat-horizontal-stepper [linear]="true" labelPosition="bottom" #stepper>
