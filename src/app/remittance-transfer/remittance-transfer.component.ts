@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-remittance-transfer',
@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class RemittanceTransferComponent implements OnInit {
-
+  @HostBinding('class.mat-typography') useMatTypography = true;
   constructor() { }
 
   ngOnInit() {
