@@ -13,11 +13,19 @@
   </style>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.8.24/jquery-ui.min.js"></script>
+  <link href="https://code.jquery.com/ui/1.8.24/themes/blitzer/jquery-ui.css" rel="stylesheet">
+  
+  <script>
+    $(function() { $("#datepicker").datepicker(); });
+  </script>
 </head>
 <body>
   <!-- <app-root></app-root> -->
   <h1>Old Application Header Sample (Cursive)</h1>
   <p>Custom content is wrapped in ---. Dashes arent part of custom component</p>
+  <p>Date: <input type="text" id="datepicker"></p>
   <div style="border: 1px dashed gray;">
     <page-remittance-transfer></page-remittance-transfer>
     
