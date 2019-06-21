@@ -3,7 +3,8 @@ import { NgModule, Injector } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { createCustomElement } from '@angular/elements';
 import { MatIconModule, MatInputModule, MatButtonModule, MatDialogModule, MatStepperModule,
-  MatDatepickerModule, MatNativeDateModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
+  MatDatepickerModule, MatNativeDateModule, MatFormFieldModule, MatSelectModule,
+  MatCheckboxModule } from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -38,6 +39,7 @@ import { CdkOverlayContainerDirective } from './cdk-overlay-container.directive'
     MatNativeDateModule,
     MatDatepickerModule,
     MatSelectModule,
+    MatCheckboxModule,
     MatStepperModule
   ],
   providers: [
