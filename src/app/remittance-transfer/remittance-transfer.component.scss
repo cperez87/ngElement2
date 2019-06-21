@@ -1,7 +1,3 @@
 // Material Icon must be imported and here so that the .classes 
 // are registered inside of the component
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "../page-shell/page-shell.component.scss"
