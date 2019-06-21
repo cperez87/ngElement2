@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, HostBinding } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-remittance-transfer',
@@ -8,9 +9,18 @@ import { MatDialog } from '@angular/material';
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class RemittanceTransferComponent implements OnInit {
-  constructor(public dialog: MatDialog) { }
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+
+  constructor(public dialog: MatDialog, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.firstFormGroup = this.formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this.formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
   }
 
   openDialog() {

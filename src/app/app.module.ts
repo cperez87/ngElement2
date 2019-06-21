@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { createCustomElement } from '@angular/elements';
-import { MatIconModule, MatInputModule, MatButtonModule, MatDialogModule } from '@angular/material';
+import { MatIconModule, MatInputModule, MatButtonModule, MatDialogModule, MatStepperModule } from '@angular/material';
 
 // import { AppComponent } from './app.component';
 import { RemittanceTransferComponent, DataExampleDialog } from './remittance-transfer/remittance-transfer.component';
@@ -22,11 +23,13 @@ import { CdkOverlayContainerDirective } from './cdk-overlay-container.directive'
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     NoopAnimationsModule,
     MatIconModule,
     MatInputModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatStepperModule
   ],
   providers: [
     { provide: OverlayContainer, useClass: CdkOverlayContainer }

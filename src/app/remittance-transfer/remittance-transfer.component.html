@@ -5,7 +5,7 @@
     <mat-form-field appearance="standard">
       <mat-label>Standard form field</mat-label>
       <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-icon matSuffix>account_circle</mat-icon>
       <mat-hint>Hint</mat-hint>
     </mat-form-field>
   </p>
@@ -21,12 +21,48 @@
     <mat-form-field appearance="outline">
       <mat-label>Outline form field</mat-label>
       <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-icon matSuffix>lock</mat-icon>
       <mat-hint>Hint</mat-hint>
     </mat-form-field>
   </p>
 </div>
 
 <button mat-raised-button color="primary" (click)="openDialog()">Open dialog</button>
+
+<hr>
+
+<mat-horizontal-stepper [linear]="true" labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <mat-form-field>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" optional>
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+            <mat-form-field>
+                <input matInput placeholder="Address" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        You are now done.
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button color="warn" (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>
 
 <div myCdkOverlayContainer></div>
