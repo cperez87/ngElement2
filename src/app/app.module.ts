@@ -6,10 +6,12 @@ import { MatIconModule, MatInputModule } from '@angular/material';
 // import { AppComponent } from './app.component';
 import { RemittanceTransferComponent } from './remittance-transfer/remittance-transfer.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { PageShellComponent } from './page-shell/page-shell.component';
 
 @NgModule({
   declarations: [
     // AppComponent,
+    PageShellComponent,
     RemittanceTransferComponent
   ],
   imports: [
@@ -19,13 +21,16 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule
   ],
   providers: [],
-  entryComponents: [RemittanceTransferComponent],
+  entryComponents: [PageShellComponent, RemittanceTransferComponent],
   // bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(injector: Injector) {
-    const custom = createCustomElement(RemittanceTransferComponent, { injector });
-    customElements.define('page-remittance-transfer', custom);
+    const pageShell = createCustomElement(PageShellComponent, { injector });
+    customElements.define('app-page-shell', pageShell);
+
+    const remittanceTransfer = createCustomElement(RemittanceTransferComponent, { injector });
+    customElements.define('page-remittance-transfer', remittanceTransfer);
   }
 
   ngDoBootstrap() {}
